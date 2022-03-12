@@ -14,5 +14,6 @@ func Divide(x, y int) int {
   } else {
     err := fmt.Errorf("Error: denominator cannot be %d", y)
     fmt.Println(err.Error())
+    return -1
   }
 }
