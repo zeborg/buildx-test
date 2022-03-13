@@ -45,6 +45,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
+        with:
+          version: 1.17
       - run: |
           GO111MODULE=on go test -v -coverprofile=coverage.out ./...
           go tool cover -func=coverage.out -o coverage.txt
