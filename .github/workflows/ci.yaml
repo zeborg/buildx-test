@@ -52,6 +52,6 @@ jobs:
       - name: Upload Coverage
         uses: codecov/codecov-action@v2.1.0
         with:
-          file: coverage.out
+          file: ./coverage.out
           fail_ci_if_error: true
           verbose: true
