@@ -51,6 +51,5 @@ jobs:
         uses: codecov/codecov-action@v2.1.0
         with:
           file: coverage.txt
-          flags: unit,os_${{ matrix.os }}
           fail_ci_if_error: true
           verbose: true
