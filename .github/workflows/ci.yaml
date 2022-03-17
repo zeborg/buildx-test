@@ -40,18 +40,18 @@ jobs:
         name: Build
         run: |
           docker build . # will run buildx
-#   codecov:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#       - uses: actions/setup-go@v2
-#         with:
-#           go-version: 1.14
-#       - run: |
-#           go test -v -coverprofile=coverage.out -covermode=atomic ./...
-#       - name: Upload Coverage
-#         uses: codecov/codecov-action@v2.1.0
-#         with:
-#           file: ./coverage.out
-#           fail_ci_if_error: true
-#           verbose: true
+  codecov:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: 1.14
+      - run: |
+          go test -v -coverprofile=coverage.out -covermode=atomic ./...
+      - name: Upload Coverage
+        uses: codecov/codecov-action@v2.1.0
+        with:
+          file: ./coverage.out
+          fail_ci_if_error: true
+          verbose: true
